@@ -16,22 +16,22 @@
 }
 
 .card {
-    @apply w-full max-w-80 bg-white rounded-lg;
+    @apply w-full max-w-80 bg-white rounded-lg grid grid-cols-1 desktop:grid-cols-[285px_auto] desktop:max-w-[45.5rem] md:max-w-[30rem];
 }
 .card__image {
-    @apply rounded-t-lg max-w-full w-80 h-[12.5rem] object-cover object-[100%_25%];
+    @apply rounded-t-lg max-w-full w-full h-[12.5rem] object-cover object-[100%_25%] desktop:h-full desktop:object-left desktop:rounded-t-none desktop:rounded-s-lg md:h-auto;
 }
 .card__content {
-    @apply px-8 py-6 flex flex-col gap-3;
+    @apply px-8 py-6 flex flex-col gap-3 md:px-10 md:py-8;
 }
 .content__subject {
-    @apply font-bold text-dark-grayish-blue mt-3;
+    @apply font-bold text-dark-grayish-blue mt-3 md:mt-0 md:text-xl;
 }
 .content__description {
     @apply text-[13px] text-dark-blue;
 }
 .content__author {
-    @apply grid grid-cols-[auto_2fr_auto] text-[13px] items-center justify-center gap-x-4 mt-4;
+    @apply grid grid-cols-[auto_2fr_auto] text-[13px] items-center justify-center gap-x-4 mt-4 desktop:mt-2;
 }
 .author__picture {
     @apply row-span-2 size-10 rounded-[50%] items-center;
