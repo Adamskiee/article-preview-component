@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+@font-face {
+    font-family:"Manrope";
+    src: url("/build/fonts/Manrope-VariableFont_wght.ttf");
+    font-weight: 500 700;
+}
+
+.card {
+    @apply w-full max-w-80 bg-white rounded-lg;
+}
+.card__image {
+    @apply rounded-t-lg max-w-full w-80 h-[12.5rem] object-cover object-[100%_25%];
+}
+.card__content {
+    @apply px-8 py-6 flex flex-col gap-3;
+}
+.content__subject {
+    @apply font-bold text-dark-grayish-blue mt-3;
+}
+.content__description {
+    @apply text-[13px] text-dark-blue;
+}
+.content__author {
+    @apply grid grid-cols-[auto_2fr_auto] text-[13px] items-center justify-center gap-x-4 mt-4;
+}
+.author__picture {
+    @apply row-span-2 size-10 rounded-[50%] items-center;
+}
+.author__name {
+    @apply font-bold text-dark-grayish-blue;
+}
+.content__publication {
+    @apply order-1 text-grayish-blue;
+}
+.content__share {
+    @apply row-span-2 bg-light-grayish-blue rounded-[50%] size-9 flex items-center justify-center;
+}
+.content__share > img {
+    @apply size-4;
+}
