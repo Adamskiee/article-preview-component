@@ -34,14 +34,40 @@
           you make any room feel complete.
         </p>
         <div class="content__author">
-          <img src="./images/avatar-michelle.jpg" alt="" class="author__picture"/>
+          <img
+            src="./images/avatar-michelle.jpg"
+            alt=""
+            class="author__picture"
+          />
           <span class="author__name">Michelle Appleton</span>
           <span class="content__publication">28 Jun 2020</span>
-          <div class="content__share">
-            <img src="./images/icon-share.svg" alt=""/>
-          </div>
+          
+          <button class="content__share" id="share-btn">
+            <img src="./images/icon-share.svg" alt="share icon" />
+          </button>
+        </div>
+
+        <!-- Desktop share menu -->
+        <div id="desktop-share-menu" class="desktop-share-menu hidden">
+          <span>SHARE</span>
+          <img src="./images/icon-facebook.svg" alt="facebook icon">
+          <img src="./images/icon-twitter.svg" alt="twitter icon">
+          <img src="./images/icon-pinterest.svg" alt="pinterest icon">
+        </div>
+
+        <!-- Mobile share menu -->
+        <div id="mobile-share-menu" class="mobile-share-menu hidden">
+          <span>SHARE</span>
+          <img src="./images/icon-facebook.svg" alt="facebook icon">
+          <img src="./images/icon-twitter.svg" alt="twitter icon">
+          <img src="./images/icon-pinterest.svg" alt="pinterest icon">
+          <button>
+            <img src="./images/icon-share.svg" alt="share icon" />
+          </button>
         </div>
       </section>
+      
     </main>
   </body>
+  <script src="scripts.js" defer></script>
 </html>
