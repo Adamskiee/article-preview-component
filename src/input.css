@@ -3,78 +3,98 @@
 @tailwind utilities;
 
 :root {
-    --dark-grayish-blue: hsl(217, 19%, 35%);
-    --dark-blue: hsl(214, 17%, 51%);
-    --grayish-blue: hsl(212, 23%, 69%);
-    --light-grayish-blue: hsl(210, 46%, 95%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
 }
 
 @font-face {
-    font-family:"Manrope";
-    src: url("/build/fonts/Manrope-VariableFont_wght.ttf");
-    font-weight: 500 700;
+  font-family: "Manrope";
+  src: url("/build/fonts/Manrope-VariableFont_wght.ttf");
+  font-weight: 500 700;
 }
 
 .card {
-    @apply w-full max-w-80 bg-white rounded-lg grid grid-cols-1 desktop:grid-cols-[285px_auto] desktop:max-w-[45.5rem] md:max-w-[30rem] shadow-2xl;
+  @apply w-full max-w-80 bg-white rounded-lg grid grid-cols-1 desktop:grid-cols-[285px_auto] desktop:max-w-[45.5rem] md:max-w-[30rem] shadow-2xl;
 }
+
 .card__image {
-    @apply rounded-t-lg max-w-full w-full h-[12.5rem] object-cover object-[100%_25%] desktop:h-full desktop:object-left desktop:rounded-t-none desktop:rounded-s-lg md:h-auto;
+  @apply rounded-t-lg max-w-full w-full h-[12.5rem] object-cover object-[100%_25%] desktop:h-full desktop:object-left desktop:rounded-t-none desktop:rounded-s-lg md:h-auto;
 }
+
 .card__content {
-    @apply px-8 py-6 flex flex-col gap-3 md:px-10 md:py-8 relative;
+  @apply px-8 py-6 flex flex-col gap-3 md:px-10 md:py-8 relative;
 }
+
 .content__subject {
-    @apply font-bold text-dark-grayish-blue mt-3 md:mt-0 md:text-xl;
+  @apply font-bold text-dark-grayish-blue mt-3 md:mt-0 md:text-xl;
 }
+
 .content__description {
-    @apply text-[13px] text-dark-blue;
+  @apply text-[0.8125rem] text-dark-blue;
 }
+
 .content__author {
-    @apply grid grid-cols-[auto_2fr_auto] text-[13px] items-center justify-center gap-x-4 mt-4 desktop:mt-2 ;
+  @apply grid grid-cols-[auto_2fr_auto] text-[0.8125rem] items-center justify-center gap-x-4 mt-4 desktop:mt-2;
 }
+
 .author__picture {
-    @apply row-span-2 size-10 rounded-[50%] items-center;
+  @apply row-span-2 size-10 rounded-[50%] items-center;
 }
+
 .author__name {
-    @apply font-bold text-dark-grayish-blue;
+  @apply font-bold text-dark-grayish-blue;
 }
+
 .content__publication {
-    @apply order-1 text-grayish-blue;
+  @apply order-1 text-grayish-blue;
 }
-.content__share{
-    @apply row-span-2 bg-light-grayish-blue rounded-[50%] size-9 flex items-center justify-center;
+
+.content__share {
+  @apply row-span-2 bg-light-grayish-blue rounded-[50%] size-9 flex items-center justify-center;
 }
+
 .content__share:hover,
 .focus-share-btn {
-    @apply bg-dark-blue;
+  @apply bg-dark-blue;
 }
 
 .content__share:hover > img,
-.focus-share-btn > img{
-    @apply brightness-0 invert-[1];
+.focus-share-btn > img {
+  @apply brightness-0 invert-[1];
 }
-@layer components {
-    .desktop-share-menu {
-        @apply flex absolute bottom-[6rem] -right-[4.1rem] bg-dark-grayish-blue py-4 px-8 items-center justify-between rounded-xl text-dark-blue gap-[1.13rem] z-20 shadow-lg;
-    }
-    .desktop-share-menu:after {
-        @apply content-[""] absolute size-4 bg-dark-grayish-blue -bottom-2 right-28 rotate-45 z-10;
-    }
-    .desktop-share-menu > span {
-        @apply tracking-[.4rem] text-xs;
-    }
 
-    .mobile-share-menu {
-        @apply flex absolute bottom-0 right-0 bg-dark-grayish-blue py-4 px-8 items-center justify-start rounded-b-xl w-full text-grayish-blue gap-[0.80rem] z-10 md:px-10 md:py-6;
-    }
-    .mobile-share-menu > span {
-        @apply tracking-[.35rem] text-xs;
-    }
-    .mobile-share-menu > button {   
-        @apply bg-dark-blue ml-auto row-span-2 rounded-[50%] size-9 flex items-center justify-center;
-    }
-    .mobile-share-menu > button > img {
-        @apply brightness-0 invert-[1];
-    }
+
+
+
+
+@layer components {
+  .desktop-share-menu {
+    @apply flex absolute bottom-[6rem] -right-[4.1rem] bg-dark-grayish-blue py-4 px-8 items-center justify-between rounded-xl text-dark-blue gap-[1.13rem] z-20 shadow-lg;
+  }
+
+  .desktop-share-menu:after {
+    @apply content-[""] absolute size-4 bg-dark-grayish-blue -bottom-2 right-28 rotate-45 z-10;
+  }
+
+  .desktop-share-menu > span {
+    @apply tracking-[.4rem] text-xs;
+  }
+
+  .mobile-share-menu {
+    @apply flex absolute bottom-0 right-0 bg-dark-grayish-blue py-4 px-8 items-center justify-start rounded-b-xl w-full text-grayish-blue gap-[0.80rem] z-10 md:px-10 md:py-6;
+  }
+
+  .mobile-share-menu > span {
+    @apply tracking-[.35rem] text-xs;
+  }
+
+  .mobile-share-menu > button {
+    @apply bg-dark-blue ml-auto row-span-2 rounded-[50%] size-9 flex items-center justify-center;
+  }
+  
+  .mobile-share-menu > button > img {
+    @apply brightness-0 invert-[1];
+  }
 }
