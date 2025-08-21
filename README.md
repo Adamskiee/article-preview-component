@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Adamskiee/article-preview-component)
-- Live Site URL: [Website](https://adamskiee.github.io/article-preview-component/)
+- Solution URL: [GitHub](https://github.com/adamskiee-frontendmentor-projects/article-preview-component)
+- Live Site URL: [Website](https://adamskiee-frontendmentor-projects.github.io/article-preview-component/)
 
 ## My process
 
